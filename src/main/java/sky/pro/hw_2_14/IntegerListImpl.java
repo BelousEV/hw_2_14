@@ -98,13 +98,23 @@ public class IntegerListImpl implements IntegerList {
     public boolean contains(Integer item) {
         if (Objects.isNull(item)) {
             throw new IllegalArgumentException("Нельзя добавлять 0 в список");
-        }
-        for (int i = 0; i < capacity; i++) {
-            if (data[i].equals(item)) {
-                return true;
+
+            sort();
+
+            int min = 0;
+            int max = capacity - 1;
+            while (min <= max) {
+                int mid = (min + max) / 2;
+                if (item.equals(data[mid])) {
+                    return true
+                }
+                if (item < data[mid]) {
+                    max = mid - 1;
+                } else {
+                    min = mid + 1;
+                }
             }
         }
-        return false;
     }
 
     @Override
@@ -140,7 +150,7 @@ public class IntegerListImpl implements IntegerList {
     }
 
     @Override
-    public Integer get(Integer index) {
+    public Integer get(int index) {
         if (index < 0) {
             throw new IllegalArgumentException("Индекс должен быть неотрицательный");
         }
