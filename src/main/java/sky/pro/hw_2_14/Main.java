@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        StringList stringList = new StringListImpl();
+        IntegerList stringList = new IntegerListImpl();
         stringList.add ("0");
         stringList.add ("1");
         stringList.add ("2");
