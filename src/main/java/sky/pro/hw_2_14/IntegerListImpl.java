@@ -1,12 +1,13 @@
 package sky.pro.hw_2_14;
 
+import java.lang.reflect.Array;
 import java.util.Objects;
 
 public class IntegerListImpl implements IntegerList {
 
     private static final int INITIAL_SIZE = 15;
 
-    private final Integer[] data;
+    private Integer[] data;
     private int capacity;
 
 
@@ -209,5 +210,8 @@ public class IntegerListImpl implements IntegerList {
             }
             data[j] = temp;
         }
+    }
+    private void grow (){
+        data = Array.copyOf(data, size + size / 2);
     }
 }
