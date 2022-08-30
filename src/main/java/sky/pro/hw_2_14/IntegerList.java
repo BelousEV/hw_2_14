@@ -17,9 +17,7 @@ public interface IntegerList {
     // в качестве результата выполнения.
     Integer add(int index, Integer item);
 
-    Integer add(Integer item);
 
-    Integer add(int index, Integer item);
 
     // Установить элемент
     // на определенную позицию,
@@ -30,7 +28,6 @@ public interface IntegerList {
     // или выходит за пределы массива.
     Integer set(int index, Integer item);
 
-    Integer set(int index, Integer item);
 
     // Удаление элемента.
     // Вернуть удаленный элемент
@@ -44,20 +41,20 @@ public interface IntegerList {
     // элемент отсутствует в списке.
     Integer remove(int index);
 
-    Integer remove(Integer index);
+
 
     // Проверка на существование элемента.
     // Вернуть true/false;
     boolean contains(Integer item);
 
-    boolean contains(Integer item);
+
 
     // Поиск элемента.
     // Вернуть индекс элемента
     // или -1 в случае отсутствия.
     int indexOf(Integer item);
 
-    int indexOf(Integer item);
+
 
     // Поиск элемента с конца.
     // Вернуть индекс элемента
@@ -75,7 +72,7 @@ public interface IntegerList {
     // если передан null.
     boolean equals(StringList otherList);
 
-    int lastIndexOf(Integer item);
+
 
     Integer get(Integer index);
 
